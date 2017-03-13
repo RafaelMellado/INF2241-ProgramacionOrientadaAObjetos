@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejemploobjetos;
 
-/**
- *
- * @author rafae
- */
 public class CajaAhorro {
     
+    private int saldo;
+    private int transacciones;
+    public CajaAhorro() {
+       saldo = 0;
+       transacciones = 0;
+    }
+    public void depositar( int monto ) {
+        saldo = saldo + monto;
+        transacciones++;
+    }
+    public void girar( int monto ) {
+        saldo = saldo - monto;
+        transacciones++;
+    }
+    public int obtenerSaldo() {
+        return saldo;
+    }
+    public int obtenerTransacciones() {
+        return transacciones;
+    }    
 }
